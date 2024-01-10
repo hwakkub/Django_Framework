@@ -5,5 +5,29 @@
 {% endblock %}
 
 {% block content %}
-    {{all_persion}}
+    <h2 class="text-center">ข้อมูลประชากรทั้งหมด</h2>
+    <table class="table table-dark table-striped">
+        <thead>
+           <tr>
+                <th scope="col">รหัส</th>
+                <th scope="col">ชื่อ</th>
+                <th scope="col">อายุ</th>
+                <th scope="col">แก้ไข</th>
+                <th scope="col">ลย</th>
+           </tr>
+        </thead>
+        <tbody>
+            {% for person in all_persion %}
+            <tr>
+                <th scope="row">{{person.id}}</th>
+                <td>{{person.name}}</td>
+                <td>{{person.age}}</td>
+                <td><a href="#" class="btn btn-warning">แก้ไข</a></a></td>
+                <td><a href="#" class="btn btn-danger">ลบ</a></td>
+            </tr>
+    
+            {% endfor %}
+        </tbody>
+    </table>
+  
 {% endblock %}
