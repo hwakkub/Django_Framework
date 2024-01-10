@@ -6,5 +6,6 @@ urlpatterns = [
     path('', views.my_view, name='my_view'),
     path('about',views.about),
     path('form',views.form),
-    path('edit/<person_id>',views.edit)
+    path('edit/<person_id>',views.edit),
+    path('delete/<person_id>',views.delete)
 ]
