@@ -6,6 +6,13 @@
 
 {% block content %}
     <h2 class="text-center">ข้อมูลประชากรทั้งหมด</h2>
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success" role="alert">
+                <strong>{{message}}</strong>
+            </div>
+        {% endfor %}
+
     <table class="table table-dark table-striped">
         <thead>
            <tr>

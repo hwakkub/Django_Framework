@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from myapp.models import Person
+from django.contrib import messages
 
 # def index(request):
 #     return render(request, "index.html")
@@ -29,6 +30,7 @@ def form(request):
             age=age
         )
         person.save()
+        messages.success(request,"บันทึกข้อมูลเรียบร้อย")
         return redirect("/")
     else :
         return render(request,'form.html')
