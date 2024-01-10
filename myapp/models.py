@@ -7,5 +7,5 @@ class Person(models.Model):
     date = models.DateField(auto_now_add = True)
 
     def __str__(self):
-        return "ชื่อ = "+self.name+","+str(self.name)
+        return "ชื่อ = "+self.name+","+str(self.age)
     
